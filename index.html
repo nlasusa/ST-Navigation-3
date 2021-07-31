@@ -47,8 +47,8 @@
 	-moz-transition-duration: 0.4s;
 	-webkit-transition-duration: 0.4s;
 	-o-transition-duration: 0.4s;
-	background-color: white;
-	color: black;
+	background-color:white;
+	color: black; 
 }
 
 .search-container {
@@ -89,14 +89,14 @@
 	-moz-transition-duration: 0.4s;
 	-webkit-transition-duration: 0.4s;
 	-o-transition-duration: 0.4s;
-	background-color: white;
-	color: black;
+	background-color: rgba(33,37,41,255);
+	color: white;
 }
 
 .search {
 	position: absolute;
 	left: 49px; /* Button width-1px (Not 50px/100% because that will sometimes show a 1px line between the search box and button) */
-	background-color: white;
+	background-color:white; 
 	outline: none;
 	border: none;
 	padding: 0;
@@ -112,6 +112,7 @@
 #searchright {
     letter-spacing: .05em;
     font-size: 14px; 
+    color: white; 
 }
 
 .search:focus {
@@ -127,6 +128,11 @@
 .expandright:focus {
 	padding: 0 0 0 16px;
 }
+
+::placeholder {
+    color: black;
+}
+
 /* // end of search bar */
 
 .navbar-brand,.nav-item, .nav-link, .dropdown-menu {
