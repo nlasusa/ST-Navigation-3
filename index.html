@@ -296,6 +296,7 @@
 .top-level-menu-right {
     display: inherit;
     margin-top: 20px; 
+    margin-bottom: 15px; 
     margin-left: -12px; 
     }
 
@@ -317,6 +318,7 @@
 #search {
     border: none; 
     padding: 5px; 
+    width: 300px; 
 }
 }
 
@@ -367,7 +369,10 @@
       <span class="navbar-toggler-icon"></span>
  </button>
 
- <!-- // search bar for smaller screens - hidden until minimized to at least 600px -->
+  <div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav ms-auto">
+        
+<!-- // search bar for smaller screens - hidden until minimized to at least 600px -->
  <label class="top-level-menu-right">
     <ul>
       <li style="position: relative;">
@@ -380,8 +385,6 @@
   </label>
 <!-- // search bar for smaller screens - hidden until minimized to at least 600px -->
 
-  <div class="collapse navbar-collapse" id="main_nav">
-    <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" style="color:white" href="#"> REPORTS</a></li>
         <li class="nav-item dropdown">
             <a class="nav-link  dropdown-toggle" style="color:white; margin-right: -50px;" href="#" data-bs-toggle="dropdown">MY ACCOUNT</a>
