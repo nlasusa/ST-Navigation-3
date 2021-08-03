@@ -20,7 +20,55 @@
 
 <style type="text/css">
 /* ============ desktop view ============ */
-/* search bar */
+.navbar-brand,.nav-item, .nav-link, .dropdown-menu {
+    color: black; 
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1em; 
+}
+
+.navbar-toggler {
+    margin-top: 40px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 70px; 
+    outline: none; 
+}
+
+.nav-link:hover {
+    text-decoration: underline; 
+    outline: none; 
+}
+
+.fa-sign-out {
+    margin-left: 10px; 
+}
+
+#ST-logo {
+    margin-top: 15px; 
+    margin-left: 10px; 
+    cursor: pointer; 
+    }
+
+#KTMC-logo {
+    margin-left: 19px; 
+    cursor: pointer; 
+}
+
+.dropdown-menu {
+    border: none; 
+    opacity: 0.99; 
+    background-color: white; 
+    z-index: 4; 
+}
+
+.dropdown-item {
+    outline: none; 
+}
+
+/* search bar desktop */
 .button {
 	display: inline-block;
 	/* margin: 4px 2px; */
@@ -131,55 +179,20 @@
 ::placeholder {
     color: black;
 }
-/* // end of search bar */
+/* // end of desktop search bar */
 
-.navbar-brand,.nav-item, .nav-link, .dropdown-menu {
-    color: black; 
+/* // search bar smaller screens //  */
+.top-level-menu-right {
+    display: none; 
+}
+
+#search {
+    outline: none; 
     font-family: 'Raleway', sans-serif;
-    letter-spacing: .1em; 
+    letter-spacing: .05em; 
+    font-size: 14px; 
 }
-
-.navbar-toggler {
-    margin-top: 40px;
-}
-
-.nav-link {
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
-    margin-top: 70px; 
-    outline: none; 
-}
-
-.nav-link:hover {
-    text-decoration: underline; 
-    outline: none; 
-}
-
-.fa-sign-out {
-    margin-left: 10px; 
-}
-
-#ST-logo {
-    margin-top: 15px; 
-    margin-left: 10px; 
-    cursor: pointer; 
-    }
-
-#KTMC-logo {
-    margin-left: 19px; 
-    cursor: pointer; 
-}
-
-.dropdown-menu {
-    border: none; 
-    opacity: 0.99; 
-    background-color: white; 
-    z-index: 4; 
-}
-
-.dropdown-item {
-    outline: none; 
-}
+/* // end of search bar smaller screens */
 
 /* // just example dashboard to display transparency of nav bar (not needed for nav bar) */
 .dashboard {
@@ -205,8 +218,6 @@
     color: black;
 }
 /* // end of example dashboard to display transparency of nav bar (not needed for nav bar) */
-
-
 
 @media all and (min-width: 992px) {
     .dropdown-menu li{
@@ -284,11 +295,18 @@
     }
 }
 
-/* @media (max-width: 600px) {
-.mobile-search-container {
-    display: inline-block;
+
+@media (max-width: 600px) {
+.top-level-menu-right {
+    display: inherit;
+    margin-top: 20px; 
     }
-} */
+
+.fa-search {
+    color: white; 
+    font-size: 17px; 
+    }
+}
 
 /* // MOBILE VIEW */
 @media (max-width: 450px) {
@@ -317,13 +335,7 @@
     display: block;
     cursor: pointer; 
     }
-
-/* .mobile-search-container {
-    margin-left: 350px; 
-    margin-top: 10px; 
-    } */
 }
-
 /* ============ small devices .end// ============ */
 </style>
 
@@ -342,6 +354,19 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
  </button>
+
+ <!-- // search bar for smaller screens - hidden until minimized to at least 600px -->
+ <label class="top-level-menu-right">
+    <ul>
+      <li style="position: relative;">
+        <form>
+          <input type="text" name="" id="search" placeholder="Search">
+          <a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
+        </form>
+      </li>
+    </ul>
+  </label>
+<!-- // search bar for smaller screens - hidden until minimized to at least 600px -->
 
   <div class="collapse navbar-collapse" id="main_nav">
     <ul class="navbar-nav ms-auto">
